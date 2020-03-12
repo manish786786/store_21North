@@ -1,0 +1,40 @@
+<section>
+
+    <div class="container">
+        <div class="row">
+            <div class="card col-md-4" *ngFor="let list of data;let i = index">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="../../assets/img/download.jpeg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title"  data-toggle="modal" (click)="openModel()" data-target="#myModal" id="b1">{{list.brandName}}</h4>
+                        <p class="card-text">{{list.overView}}
+                        </p>
+                        <a class="btn btn-primary" (click)="goToDetails(list)">See Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Brand Name</h4>
+                </div>
+                <div class="modal-body">
+                    <p>overView</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
